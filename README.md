@@ -1,1 +1,1 @@
-# emacs.d
+Derived from github.com/tonini/emacs.d

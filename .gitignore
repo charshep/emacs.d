@@ -1,11 +1,27 @@
-# Compiled
+.DS_Store
 *.elc
-
-# Packaging
+\#*
+doc/*
+bookmarks
+backup
+backup.*
+org-clock-save.el
+ac-comphist.dat
+tramp
+elpa
+var
+eshell
+ido.last
+recentf
 .cask
-
-# Backup files
-*~
-
-# Undo-tree save-files
-*.~undo-tree
+emms
+tmp
+url
+auto-save-list
+projectile-bookmarks.eld
+projectile.cache
+tutorial/*
+.mc-lists.el
+network-security.data
+.emacs.desktop
+.emacs.desktop.lock
