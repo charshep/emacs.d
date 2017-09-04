@@ -123,10 +123,38 @@
 ;; Packages
 
 (use-package ido
+  :disabled ; switching to helm
   :config
   (setq ido-enable-flex-matching t)
   (ido-everywhere t)
   (ido-mode 1))
+
+; from tuhdo.github.io/helm-intro.html
+(use-package helm
+  :ensure t
+  :config
+  (progn
+    (when (executable-find "curl")
+      (setq helm-google-suggest-use-curl-p t))
+    (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+	  helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+	  helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+	  helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+	  helm-ff-file-name-history-use-recentf t
+	  helm-echo-input-in-header-line t)
+					; skipping for now helm-hide-minibuffer-maybe but it would go here
+    (setq helm-autoresize-max-height 40)
+    (setq helm-autoresize-min-height 0)
+    (helm-autoresize-mode 1)
+    (setq helm-buffers-fuzzy-matching t)
+    (helm-mode 1))
+  :bind (("M-x" . helm-M-x)
+	 ("C-x b" . helm-mini)
+	 ("C-x C-f" . helm-find-files))
+  :bind	 (:map helm-map
+  	       ("TAB" . helm-execute-persistent-action)
+  	       ("C-i" . helm-execute-persistent-action) ; make TAB work in terminal
+  	       ("C-z" . helm-select-action)))
 
 (use-package hl-line
   :init (global-hl-line-mode 1))
@@ -238,7 +266,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+    (helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
