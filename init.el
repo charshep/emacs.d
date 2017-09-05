@@ -54,6 +54,7 @@
 
 (delete-selection-mode 1)
 (transient-mark-mode 1)
+(electric-pair-mode 1)
 
 ;; No blinking and beeping, no startup screen, no scratch message and short
 ;; Yes/No questions.
