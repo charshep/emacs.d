@@ -256,6 +256,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
+ '(c-default-style
+   (quote
+	((java-mode . "java")
+	 (awk-mode . "awk")
+	 (other . "cc-mode"))))
  '(debug-on-error t)
  '(history-delete-duplicates t)
  '(history-length t)
@@ -266,8 +271,9 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-    (helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
- '(show-paren-mode t))
+	(helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+ '(show-paren-mode t)
+ '(tab-width 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
