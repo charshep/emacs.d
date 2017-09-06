@@ -263,6 +263,7 @@
 	 (awk-mode . "awk")
 	 (other . "cc-mode"))))
  '(debug-on-error t)
+ '(helm-buffer-max-length nil)
  '(history-delete-duplicates t)
  '(history-length t)
  '(hscroll-margin 20)
