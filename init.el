@@ -267,6 +267,7 @@
 	 (awk-mode . "awk")
 	 (other . "cc-mode"))))
  '(debug-on-error t)
+ '(helm-adaptive-mode t nil (helm-adaptive))
  '(helm-buffer-max-length nil)
  '(history-delete-duplicates t)
  '(history-length t)
