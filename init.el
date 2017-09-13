@@ -19,6 +19,7 @@
   (require 'use-package))
 (require 'diminish)
 (require 'bind-key)
+(require 'cl) ; for search function
 
 ;; Customization - for package cus-edit if I ever use it
 ;(defconst my-custom-file (locate-user-emacs-file "customize.el")
