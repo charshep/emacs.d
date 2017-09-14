@@ -31,6 +31,12 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; Calendar setup
+(setq calendar-latitude 37.6901750)
+(setq calendar-longitude -121.8952850)
+(setq calendar-location-name "Veeva HQ")
+
+
 ;; Load my own lisp and keybindings
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'my-utils)
@@ -167,7 +173,7 @@
 
 (use-package company						; COMP-lete ANY-ware
   :ensure t
-  :init (global-company-mode) ; why is this in init and not in config?
+  ;:init (global-company-mode) ; why is this in init and not in config?
   :config
   (progn
     ;(delete 'company-dabbrev company-backends)
@@ -176,7 +182,8 @@
 	  company-idle-delay 0.3
 	  company-tooltip-limit 10
 	  company-minimum-prefix-length 2
-	  company-tooltip-flip-when-above t))
+	  company-tooltip-flip-when-above t)
+	(global-company-mode))
   :bind (:map company-active-map
               ("M-k" . company-select-next)
               ("M-i" . company-select-previous)
