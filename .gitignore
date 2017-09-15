@@ -25,3 +25,4 @@ tutorial/*
 network-security.data
 .emacs.desktop
 .emacs.desktop.lock
+helm-adaptive-history

@@ -31,12 +31,6 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-;; Calendar setup
-(setq calendar-latitude 37.6901750)
-(setq calendar-longitude -121.8952850)
-(setq calendar-location-name "Veeva HQ")
-
-
 ;; Load my own lisp and keybindings
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'my-utils)
@@ -274,6 +268,8 @@
 	((java-mode . "java")
 	 (awk-mode . "awk")
 	 (other . "cc-mode"))))
+ '(calendar-latitude 37.690175)
+ '(calendar-longitude -121.895285)
  '(debug-on-error t)
  '(helm-adaptive-mode t nil (helm-adaptive))
  '(helm-buffer-max-length nil)
