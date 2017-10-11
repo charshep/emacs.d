@@ -277,12 +277,14 @@
  '(history-length t)
  '(hscroll-margin 20)
  '(hscroll-step 1)
+ '(magit-diff-refine-hunk t)
+ '(magit-dispatch-arguments nil)
  '(ns-alternate-modifier (quote super))
  '(ns-command-modifier (quote meta))
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4))
 (custom-set-faces
