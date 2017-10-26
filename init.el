@@ -21,6 +21,10 @@
 (require 'bind-key)
 (require 'cl) ; for search function
 
+; fix for broken cert authorities on OS X version of emacs: https://blog.vifortech.com/posts/emacs-tls-fix/
+(require 'gnutls)
+(add-to-list 'gnutls-trustfiles "/usr/local/etc/libressl/cert.pem")
+
 ;; Customization - for package cus-edit if I ever use it
 ;(defconst my-custom-file (locate-user-emacs-file "customize.el")
 ;  "File used to store settings from Customization UI.")
