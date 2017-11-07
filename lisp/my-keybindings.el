@@ -1,6 +1,7 @@
 ;; Most of these are from Yegge's 10 Effective Emacs Tips
 (global-set-key "\C-X\C-B" 'ibuffer)
-(global-set-key "\C-\\" 'dabbrev-expand)
+;(global-set-key "\C-\\" 'dabbrev-expand)
+(global-set-key "\M-/" 'hippie-expand)
 (global-set-key "\C-i" 'indent-relative)
 (global-set-key "\C-c@" 'uncomment-region)
 (global-set-key "\M-s" 'isearch-forward-regexp)
