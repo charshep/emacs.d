@@ -291,7 +291,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(winner-mode t))
@@ -300,5 +300,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(comint-highlight-prompt ((t nil))))
 (put 'dired-find-alternate-file 'disabled nil)
