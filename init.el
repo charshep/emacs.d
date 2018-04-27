@@ -275,6 +275,7 @@
  '(calendar-latitude 37.690175)
  '(calendar-longitude -121.895285)
  '(debug-on-error t)
+ '(global-magit-file-mode t)
  '(helm-adaptive-mode t nil (helm-adaptive))
  '(helm-buffer-max-length nil)
  '(hippie-expand-try-functions-list
@@ -291,7 +292,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(winner-mode t))
