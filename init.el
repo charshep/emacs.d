@@ -40,6 +40,9 @@
 (require 'my-utils)
 (require 'my-keybindings)
 
+;; Fix for Symbol's value as variable is void: shell-mode-map when loading helm below
+(require 'shell)
+
 
 ;;;
 ;; User interface
@@ -80,6 +83,8 @@
 
 
 ;; Full screen
+(add-to-list 'default-frame-alist '(font . "-*-courier new-medium-r-normal--0-0-0-0-m-0-iso10646-1"))
+(modify-frame-parameters (selected-frame) '((font . "-*-courier new-medium-r-normal--0-0-0-0-m-0-iso10646-1")))
 (set-frame-parameter nil 'fullscreen 'fullboth) ; no longer works in emacs 23
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
@@ -266,7 +271,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-revert-check-vc-info t)
+ '(auto-revert-check-vc-info nil) ; performance problems if set with lots of buffers
  '(blink-cursor-mode nil)
  '(c-default-style
    (quote
@@ -275,6 +280,9 @@
 	 (other . "cc-mode"))))
  '(calendar-latitude 37.690175)
  '(calendar-longitude -121.895285)
+ '(custom-safe-themes
+   (quote
+	("8dc7f4a05c53572d03f161d82158728618fb306636ddeec4cce204578432a06d" default)))
  '(debug-on-error t)
  '(global-magit-file-mode t)
  '(helm-adaptive-mode t nil (helm-adaptive))
@@ -293,7 +301,8 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(kotlin-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	;(matlab-mode kotlin-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(winner-mode t))
