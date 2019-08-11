@@ -271,7 +271,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-revert-check-vc-info nil) ; performance problems if set with lots of buffers
+ '(auto-revert-check-vc-info nil)
  '(blink-cursor-mode nil)
  '(c-default-style
    (quote
@@ -301,8 +301,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(kotlin-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
-	;(matlab-mode kotlin-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(winner-mode t))
