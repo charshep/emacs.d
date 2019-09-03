@@ -10,6 +10,8 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
+			 '("gnu" . "http://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives
              '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/"))
@@ -301,7 +303,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(company-restclient magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(winner-mode t))
