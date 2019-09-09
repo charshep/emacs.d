@@ -303,7 +303,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(company-restclient magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(kotlin-mode company-restclient magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(winner-mode t))
