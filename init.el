@@ -220,6 +220,19 @@
   ;:diminish (yas-minor-mode . " YS"))
   )
 
+(use-package projectile
+  :ensure t
+  :pin melpa
+  :config
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode +1))
+
+(use-package helm-projectile
+  :ensure t
+  :config
+  (helm-projectile-on))
+
 ;;; Environment fixup
 
 (use-package exec-path-from-shell
@@ -303,7 +316,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-	(kotlin-mode company-restclient magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+	(helm-projectile projectile kotlin-mode company-restclient magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(winner-mode t))
