@@ -88,4 +88,13 @@ current buffer too."
 
 (add-hook 'find-file-hook 'my-choose-header-mode)
 
+;;;
+;; Mode hooks
+
+;; Swift
+(add-hook 'swift-mode-hook
+          (lambda ()
+            (add-to-list (make-local-variable 'company-backends)
+                         'company-sourcekit)))
+
 (provide 'my-utils)
