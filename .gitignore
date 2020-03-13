@@ -5,6 +5,7 @@ doc/*
 bookmarks
 backup
 backup.*
+%backup%~
 org-clock-save.el
 ac-comphist.dat
 tramp
@@ -26,3 +27,5 @@ network-security.data
 .emacs.desktop
 .emacs.desktop.lock
 helm-adaptive-history
+request
+transient
