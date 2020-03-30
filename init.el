@@ -328,7 +328,7 @@
  '(ns-function-modifier (quote hyper))
  '(package-selected-packages
    (quote
-    (yasnippet-classic-snippets kotlin-mode visual-fill-column helm-projectile projectile company-restclient magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
+    (magit-gitflow lsp-sourcekit yasnippet-classic-snippets kotlin-mode visual-fill-column helm-projectile projectile company-restclient magit magit-popup matlab-mode vlf web-server magit helm exec-path-from-shell yasnippet use-package swift-mode company-sourcekit calmer-forest-theme)))
  '(projectile-sort-order (quote recently-active))
  '(projectile-use-git-grep t)
  '(show-paren-mode t)
