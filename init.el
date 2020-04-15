@@ -129,6 +129,8 @@
 
 (setq gc-cons-threshold 20000000)
 
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
+
 (server-start)
 
 
@@ -232,6 +234,12 @@
   :ensure t
   :config
   (helm-projectile-on))
+
+(use-package lsp-sourcekit
+  :after lsp-mode
+  :config
+  (setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain") ; guessing this from executable path returned from xcrun --find sourcekit-lsp
+  (setq lsp-sourcekit-executable (expand-file-name "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))) ; TODO run xcrun --find sourcekit-lsp directly
 
 ;;; Environment fixup
 
