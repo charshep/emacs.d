@@ -42,5 +42,6 @@
 (defalias 'fg 'find-grep-source-at-point)
 (defalias 'bb 'bury-buffer)
 (defalias 'ttl 'toggle-truncate-lines)
+(defalias 'bj 'browse-jira)
 
 (provide 'my-keybindings)

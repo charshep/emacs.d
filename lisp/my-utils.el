@@ -88,6 +88,23 @@ current buffer too."
 
 (add-hook 'find-file-hook 'my-choose-header-mode)
 
+;; Veeva stuff
+(defun browse-jira (ticket)
+  (interactive (list (read-string "Enter ticket: " (jira-ticket-at-point))))
+;  (print ticket)
+  (let ((url (format "https://jira.veevadev.com/browse/%s" ticket)))
+;    (print url)))
+   (start-process (concat "open " url) nil "open" url)))
+
+(defun jira-ticket-at-point ()
+;  (interactive) ; debugging
+  (let ((thing (thing-at-point 'symbol t)))
+;    (print thing)
+    (if (stringp thing)
+        (if (string-match "\\(CRM\\|DEV\\|VMI\\)-[[:digit:]]+" thing)
+            thing)
+      "")))
+
 ;;;
 ;; Mode hooks
 
