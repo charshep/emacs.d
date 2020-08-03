@@ -97,12 +97,12 @@ current buffer too."
    (start-process (concat "open " url) nil "open" url)))
 
 (defun jira-ticket-at-point ()
-;  (interactive) ; debugging
+  ; (interactive) ; debugging
   (let ((thing (thing-at-point 'symbol t)))
-;    (print thing)
+    ; (print thing) ; debugging
     (if (stringp thing)
-        (if (string-match "\\(CRM\\|DEV\\|VMI\\)-[[:digit:]]+" thing)
-            thing)
+        (if (string-match "\\(\\(CRM\\|DEV\\|VMI\\)-[[:digit:]]+\\)" thing)
+            (match-string 1 thing))
       "")))
 
 ;;;
