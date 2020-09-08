@@ -240,6 +240,14 @@
   :config
   (setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain") ; guessing this from executable path returned from xcrun --find sourcekit-lsp
   (setq lsp-sourcekit-executable (expand-file-name "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))) ; TODO run xcrun --find sourcekit-lsp directly
+;;TODO lsp-clients-clangd-executable OR keep relying on path in $PATH
+
+;; BUILDING json-compilation-database for clangd:
+;; 1. install via brew xcpretty
+;; 2. In Xcode: build project
+;; 3. In Xcode: export build log (TODO perfrom this via command line?)
+;; 4. cat xcodebuild.log |xcpretty -r json-compilation-database --output compile_commands.json
+;; TODO make alias or script and link to emacs?
 
 ;;; Environment fixup
 
