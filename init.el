@@ -249,6 +249,7 @@
 ;; 4. cat xcodebuild.log |xcpretty -r json-compilation-database --output compile_commands.json
 ;; TODO make alias or script and link to emacs?
 
+;; NOTE for CRM need to disable module debugging in project file (or optionally disable on command line if building on CL?)
 ;; from https://github.com/MaskRay/ccls/issues/330
 ;; I believe it’s the “-gmodules” flag in your command string in compile_commands.json. If you look at the clang documentation for “-gmodules”, it states:
 ;; “This option transparently switches the Clang module format to object file containers...”
