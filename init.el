@@ -181,6 +181,8 @@
 (use-package company						; COMP-lete ANY-ware
   :ensure t
   ;:init (global-company-mode) ; why is this in init and not in config?
+  :init
+  (setq company-backends '((company-files company-keywords company-capf company-dabbrev-code company-etags company-dabbrev)))
   :config
   (progn
     ;(delete 'company-dabbrev company-backends)
@@ -197,6 +199,14 @@
               ("TAB" . company-complete-selection))
   ;:diminish company-mode)
   )
+
+;; https://emacs-lsp.github.io/lsp-mode/page/installation/
+;; see lsp-sourcekit below for objc integration
+(use-package lsp-mode
+  :hook (objc-mode . lsp-deferred)
+  :commands (lsp-deferred)
+  )
+  
 
 (use-package eldoc)						; lisp info in echo area
 
