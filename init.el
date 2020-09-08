@@ -245,9 +245,15 @@
 ;; BUILDING json-compilation-database for clangd:
 ;; 1. install via brew xcpretty
 ;; 2. In Xcode: build project
-;; 3. In Xcode: export build log (TODO perfrom this via command line?)
+;; 3. In Xcode: export build log (TODO perfrom this via command line? may be stuck using UI or building on command line and piping to xcpretty: http://joemburgess.com/2014/10/04/diving-into-xcode-logs/)
 ;; 4. cat xcodebuild.log |xcpretty -r json-compilation-database --output compile_commands.json
 ;; TODO make alias or script and link to emacs?
+
+;; from https://github.com/MaskRay/ccls/issues/330
+;; I believe it’s the “-gmodules” flag in your command string in compile_commands.json. If you look at the clang documentation for “-gmodules”, it states:
+;; “This option transparently switches the Clang module format to object file containers...”
+;; I had the same issue that was resolved with removing that flag.
+;; It can be removed in Xcode, under build settings, with the “Enable clang module debugging” option set to “NO”
 
 ;;; Environment fixup
 
