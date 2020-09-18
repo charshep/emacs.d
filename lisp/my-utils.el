@@ -102,8 +102,9 @@ current buffer too."
     ; (print thing) ; debugging
     (if (stringp thing)
         (if (string-match "\\(\\(CRM\\|DEV\\|VMI\\)-[[:digit:]]+\\)" thing)
-            (match-string 1 thing))
-      "")))
+            (match-string 1 thing)
+          "CRM-")
+      "CRM-")))
 
 ;;;
 ;; Mode hooks
