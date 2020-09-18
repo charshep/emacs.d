@@ -354,6 +354,7 @@
  '(hscroll-margin 20)
  '(hscroll-step 1)
  '(indent-tabs-mode nil)
+ '(lsp-enable-on-type-formatting nil)
  '(magit-diff-refine-hunk t)
  '(magit-dispatch-arguments nil)
  '(ns-alternate-modifier (quote super))
