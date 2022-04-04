@@ -367,6 +367,7 @@
  '(projectile-use-git-grep t)
  '(show-paren-mode t)
  '(tab-width 4)
+ '(transient-default-level 7)
  '(winner-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
