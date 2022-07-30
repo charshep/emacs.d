@@ -65,28 +65,29 @@ current buffer too."
       (error "No number at point"))
   (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
 
-(defun my-choose-header-mode ()
-  (interactive)
-  (if (string-equal (substring (buffer-file-name) -2) ".h")
-      (progn
-        ;; OK, we got a .h file, if a .m file exists we'll assume it's
-        ; an objective c file. Otherwise, we'll look for a .cpp file.
-        (let ((dot-m-file (concat (substring (buffer-file-name) 0 -1) "m"))
-              (dot-cpp-file (concat (substring (buffer-file-name) 0 -1) "cpp")))
-          (if (file-exists-p dot-m-file)
-              (progn
-                (objc-mode)
-                )
-            (if (file-exists-p dot-cpp-file)
-                (c++-mode)
-              )
-            )
-          )
-        )
-    )
-  )
+;; replaced by projectile
+;; (defun my-choose-header-mode ()
+;;   (interactive)
+;;   (if (string-equal (substring (buffer-file-name) -2) ".h")
+;;       (progn
+;;         ;; OK, we got a .h file, if a .m file exists we'll assume it's
+;;         ; an objective c file. Otherwise, we'll look for a .cpp file.
+;;         (let ((dot-m-file (concat (substring (buffer-file-name) 0 -1) "m"))
+;;               (dot-cpp-file (concat (substring (buffer-file-name) 0 -1) "cpp")))
+;;           (if (file-exists-p dot-m-file)
+;;               (progn
+;;                 (objc-mode)
+;;                 )
+;;             (if (file-exists-p dot-cpp-file)
+;;                 (c++-mode)
+;;               )
+;;             )
+;;           )
+;;         )
+;;     )
+;;   )
 
-(add-hook 'find-file-hook 'my-choose-header-mode)
+;; (add-hook 'find-file-hook 'my-choose-header-mode)
 
 ;; Veeva stuff
 (defun browse-jira (ticket)

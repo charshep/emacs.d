@@ -22,12 +22,12 @@
 (global-set-key [down] 'scroll-up-keep-cursor)
 (global-set-key [up] 'scroll-down-keep-cursor)
 
-; enable skeleton-pair for these to work
-(global-set-key "["  'skeleton-pair-insert-maybe)
-(global-set-key "("  'skeleton-pair-insert-maybe)
-(global-set-key "{"  'skeleton-pair-insert-maybe)
-(global-set-key "\"" 'skeleton-pair-insert-maybe)
-;(global-set-key "'"  'skeleton-pair-insert-maybe)
+; enable skeleton-pair for these to work (replaced by smartparen)
+;; (global-set-key "["  'skeleton-pair-insert-maybe)
+;; (global-set-key "("  'skeleton-pair-insert-maybe)
+;; (global-set-key "{"  'skeleton-pair-insert-maybe)
+;; (global-set-key "\"" 'skeleton-pair-insert-maybe)
+;; ;(global-set-key "'"  'skeleton-pair-insert-maybe)
 
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'lml 'list-matching-lines)
