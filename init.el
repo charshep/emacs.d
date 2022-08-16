@@ -69,7 +69,7 @@
 (transient-mark-mode 1)
 ;; No blinking and beeping, no startup screen, no scratch message and short
 ;; Yes/No questions.
-(blink-cursor-mode 1)	
+(blink-cursor-mode nil)
 (setq ring-bell-function #'ignore
       inhibit-startup-screen t
       echo-keystrokes 0.1
