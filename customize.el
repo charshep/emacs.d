@@ -13,12 +13,14 @@
    '("143d897548e5a7efb5cf92c35bd39fe7c90cbd28f9236225ad3e80e1b79cef8a" default))
  '(display-time-day-and-date t)
  '(helm-buffer-max-length nil)
+ '(lsp-after-apply-edits-hook '((lambda (op) (move-end-of-line nil))))
  '(magit-diff-refine-hunk t)
  '(package-selected-packages
    '(yasnippet-snippets yasnippet-classic-snippets smartparens yasnippet exec-path-from-shell lsp-sourcekit lsp-mode company helm-projectile projectile swift-mode magit helm use-package diminish calmer-forest-theme))
  '(scroll-conservatively 100)
  '(scroll-preserve-screen-position nil)
- '(tab-width 4))
+ '(tab-width 4)
+ '(transient-default-level 7))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
