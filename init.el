@@ -285,7 +285,7 @@
 (use-package lsp-mode
   :hook
   (objc-mode . (lambda () (lsp-deferred) (electric-indent-local-mode -1))) ; electric overrides clang-format
-  (swift-mode . lsp-deferred)
+  (swift-mode . (lambda () (lsp-deferred) (electric-indent-local-mode 1))) ; lsp does not support formatting for swift so use swift-mode/electric-mode instead
   :commands (lsp-deferred))
 
 ;;; LSP protocol implementation for Swift/Objc
