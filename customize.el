@@ -14,9 +14,13 @@
  '(display-time-day-and-date t)
  '(helm-buffer-max-length nil)
  '(lsp-after-apply-edits-hook '((lambda (op) (move-end-of-line nil))))
+ '(lsp-clients-clangd-args
+   '("--header-insertion-decorators=0" "--header-insertion=never"))
+ '(lsp-enable-file-watchers nil)
  '(magit-diff-refine-hunk t)
  '(package-selected-packages
-   '(yasnippet-snippets yasnippet-classic-snippets smartparens yasnippet exec-path-from-shell lsp-sourcekit lsp-mode company helm-projectile projectile swift-mode magit helm use-package diminish calmer-forest-theme))
+   '(lsp-java lsp-sourcekit lsp-mode geiser-mit yasnippet-snippets yasnippet-classic-snippets smartparens yasnippet exec-path-from-shell company helm-projectile projectile swift-mode magit helm use-package diminish calmer-forest-theme))
+ '(reb-re-syntax 'string)
  '(scroll-conservatively 100)
  '(scroll-preserve-screen-position nil)
  '(tab-width 4)

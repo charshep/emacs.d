@@ -236,7 +236,7 @@
 )
 
 ;;; Swift Mode
-(use-package swift-mode :ensure t)
+;(use-package swift-mode :ensure t)
 
 ;;; Projectile
 (use-package projectile
@@ -292,9 +292,14 @@
 (use-package lsp-sourcekit
   :after lsp-mode
   :config
-  (setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain") ; guessing this from executable path returned from xcrun --find sourcekit-lsp
-  (setq lsp-sourcekit-executable (expand-file-name "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
-  (setq lsp-clients-clangd-executable (expand-file-name "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clangd"))) ; TODO run xcrun --find sourcekit-lsp directly
+  ;;(setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain") ; guessing this from executable path returned from xcrun --find sourcekit-lsp
+  (setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain")
+  ;;(setq lsp-sourcekit-executable (expand-file-name "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
+  ;;(setq lsp-sourcekit-executable (expand-file-name "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
+  (setq lsp-sourcekit-executable (string-trim (shell-command-to-string "xcrun --find sourcekit-lsp")))
+  (setq lsp-clients-clangd-executable (string-trim (shell-command-to-string "xcrun --find clangd")))
+  ;;(setq lsp-clients-clangd-executable (expand-file-name "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clangd"))
+) ; TODO run xcrun --find clangd
 ;;TODO lsp-clients-clangd-executable OR keep relying on path in $PATH
 
 (use-package winner                     ; Undo and redo window configurations
