@@ -22,7 +22,7 @@
  '(lsp-enable-file-watchers t)
  '(magit-diff-refine-hunk t)
  '(package-selected-packages
-   '(lsp-java lsp-sourcekit lsp-mode geiser-mit yasnippet-snippets yasnippet-classic-snippets smartparens yasnippet exec-path-from-shell company helm-projectile projectile swift-mode magit helm use-package diminish calmer-forest-theme))
+   '(csv-mode restclient-jq restclient-helm restclient lsp-java lsp-sourcekit lsp-mode geiser-mit yasnippet-snippets yasnippet-classic-snippets smartparens yasnippet exec-path-from-shell company helm-projectile projectile swift-mode magit helm use-package diminish calmer-forest-theme))
  '(reb-re-syntax 'string)
  '(scroll-conservatively 100)
  '(scroll-preserve-screen-position nil)
