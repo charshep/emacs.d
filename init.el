@@ -83,7 +83,7 @@
 ;; ridiculously bizarre thing entirely.
 ;(fset 'display-startup-echo-area-message #'ignore)
 
-(global-linum-mode)
+;;(global-linum-mode)
 (display-time)
 
 ; TODO investigate conifuring these
@@ -296,7 +296,7 @@
   :after lsp-mode
   :config
   ;;(setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain") ; guessing this from executable path returned from xcrun --find sourcekit-lsp
-  (setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode-15.0.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain")
+  (setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Applications/Xcode-15.3.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain")
   ;;(setq lsp-sourcekit-executable (expand-file-name "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
   ;;(setq lsp-sourcekit-executable (expand-file-name "/Applications/Xcode-14.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
   (setq lsp-sourcekit-executable (string-trim (shell-command-to-string "xcrun --find sourcekit-lsp")))

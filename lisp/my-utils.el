@@ -46,6 +46,9 @@ current buffer too."
 
 ;; Handy tea timer
 (defun tea-is-done ()
+  (setq ring-bell-function nil)
+  (ding)
+  (setq ring-bell-function 'ignore) ; TODO save and restore actual custom value
   (switch-to-buffer "*Tea Timer*")
   (insert "Tea is ready")
 )
@@ -53,7 +56,7 @@ current buffer too."
 (defun tea-timer ()
   "Display 'Tea is ready' in buffer '*Tea Timer*' after 2 minutes have elapsed."
   (interactive)
-  (run-at-time "2 min" nil 'tea-is-done)
+  (run-at-time "5 min" nil 'tea-is-done)
 )
 
 ;; From www.emacswiki.org/cgi-bin/wiki/IncrementNumber
@@ -102,10 +105,10 @@ current buffer too."
   (let ((thing (thing-at-point 'symbol t)))
     ; (print thing) ; debugging
     (if (stringp thing)
-        (if (string-match "\\(\\(CRM\\|DEV\\|VMI\\)-[[:digit:]]+\\)" thing)
+        (if (string-match "\\(\\(CRM\\|DEV\\|VCRM\\)-[[:digit:]]+\\)" thing)
             (match-string 1 thing)
-          "CRM-")
-      "CRM-")))
+          "VCRM-")
+      "VCRM-")))
 
 ;;;
 ;; Mode hooks
