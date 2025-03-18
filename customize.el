@@ -13,19 +13,24 @@
  '(column-number-mode t)
  '(custom-safe-themes
    '("143d897548e5a7efb5cf92c35bd39fe7c90cbd28f9236225ad3e80e1b79cef8a" default))
+ '(debug-on-quit nil)
  '(display-time-day-and-date t)
  '(display-time-mode t)
  '(gc-cons-threshold 100000000)
+ '(global-auto-revert-mode t)
  '(helm-buffer-max-length nil)
  '(lsp-after-apply-edits-hook '((lambda (op) (move-end-of-line nil))))
  '(lsp-clients-clangd-args
    '("--header-insertion-decorators=0" "--header-insertion=never"))
- '(lsp-enable-file-watchers t)
+ '(lsp-enable-file-watchers nil)
+ '(lsp-java-java-path
+   "/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home/bin/java")
+ '(lsp-java-show-build-status-on-start-enabled t)
  '(lsp-java-vmargs
-   '("-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90" "-Dsun.zip.disableMemoryMapping=true" "-Xmx4G" "-Xms100m"))
+   '("-XX:+UseParallelGC" "-XX:GCTimeRatio=4" "-XX:AdaptiveSizePolicyWeight=90" "-Dsun.zip.disableMemoryMapping=true" "-Xmx8G" "-Xms100m"))
  '(magit-diff-refine-hunk t)
  '(package-selected-packages
-   '(string-inflection csv-mode restclient-jq restclient-helm restclient lsp-java lsp-sourcekit lsp-mode geiser-mit yasnippet-snippets yasnippet-classic-snippets smartparens yasnippet exec-path-from-shell company helm-projectile projectile swift-mode magit helm use-package diminish calmer-forest-theme))
+   '(expand-region string-inflection csv-mode restclient-jq restclient-helm restclient lsp-java lsp-sourcekit lsp-mode geiser-mit yasnippet-snippets yasnippet-classic-snippets smartparens yasnippet exec-path-from-shell company helm-projectile projectile swift-mode magit helm use-package diminish calmer-forest-theme))
  '(projectile-enable-caching nil)
  '(reb-re-syntax 'string)
  '(scroll-conservatively 100)
