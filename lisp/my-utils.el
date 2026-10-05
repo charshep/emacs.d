@@ -68,6 +68,20 @@ current buffer too."
       (error "No number at point"))
   (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
 
+(defun url-decode-region (start end)
+  "URL-decode the region between START and END."
+  (interactive "r")
+  (let ((decoded-text (url-unhex-string (buffer-substring-no-properties start end))))
+    (delete-region start end)
+    (insert decoded-text)))
+
+(defun url-encode-region (start end)
+  "URL-decode the region between START and END."
+  (interactive "r")
+  (let ((encoded-text (url-hexify-string (buffer-substring-no-properties start end))))
+    (delete-region start end)
+    (insert encoded-text)))
+
 ;; replaced by projectile
 ;; (defun my-choose-header-mode ()
 ;;   (interactive)
